@@ -1,4 +1,4 @@
-class Personnage {
+export class Personnage {
     private name: string;
     private health: number;
     private strenght: number;
@@ -51,5 +51,8 @@ class Personnage {
         this.exp = newvalue;
     }
 
+    attack(oppenant : Personnage){}
+
+    die() : void{}
 }
 
