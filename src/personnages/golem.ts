@@ -1,5 +1,4 @@
 import { Ennemies } from "./ennemies";
-import { Personnage } from "./personnage";
 
 export class Golem extends Ennemies { 
 
