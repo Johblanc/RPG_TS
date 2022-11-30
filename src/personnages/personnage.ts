@@ -51,7 +51,7 @@ export class Personnage {
         this.exp = newvalue;
     }
 
-    attack(oppenant : Personnage){}
+    attack(opponent : Personnage){}
 
     die() : void{}
 }
