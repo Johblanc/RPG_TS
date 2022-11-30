@@ -5,7 +5,7 @@ export class dragon extends Ennemies {
     isFlying : boolean
 
     constructor(name: string, health: number, strenght: number, lvl: number, exp: number) {
-        super(name, health, strenght, lvl, exp,isFlying)
+        super(name, health, strenght, lvl, exp,)
         this.isFlying = this.isFlying
     }
     fly(): void { }
