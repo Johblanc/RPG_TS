@@ -31,73 +31,73 @@ Pour les besoins d'un studio de développement de jeux videos, vous etes chargé
   - attaque au sol
   - fly
   - attackFromSky
-Le Dragon et le Wereworf ont une resistance de 50% supplementaire
-L'Assassin inflige 10% de degat supplementaire à chaque nouvelle attaque
-Le berserker a un bonus de resistance de 30%
-Le Golem a 50% de chance d'annuler les degats recus
-​
+- Le Dragon et le Wereworf ont une resistance de 50% supplementaire
+- L'Assassin inflige 10% de degat supplementaire à chaque nouvelle attaque
+- Le berserker a un bonus de resistance de 30%
+- Le Golem a 50% de chance d'annuler les degats recus
 
-Une class Battle permettant à un Hero de combattre un ennemi
 
-Implementation libre, nous faire une proposition
-​
+### Une class Battle permettant à un Hero de combattre un ennemi
 
-Bonus: Une classe BattleSimulation permettant de :
+- Implementation libre, nous faire une proposition
 
-faire combattre le Hero contre chaque ennemi jusqu'à la mort du Hero et afficher les stats de chaque tour du combat dans un tableaux html.
-faire combattre les ennemis entre eux et les classer par puissance dans un tableau html.
-Exemple d'un combat:
 
-Humans vs Werewolf
+### Bonus: Une classe BattleSimulation permettant de :
 
-Humans stat: { name: "Cloud" , health: 100, strength: 30, lvl: 1, xp: 0, race: "humans" };
+- faire combattre le Hero contre chaque ennemi jusqu'à la mort du Hero et afficher les stats de chaque tour du combat dans un tableaux html.
+- faire combattre les ennemis entre eux et les classer par puissance dans un tableau html.
 
-Wereworf stat: { name: "Thad" , health: 30, strength: 10, lvl: 1, xp: 0 };
+### Exemple d'un combat:
 
-Tour 1 : Cloud attaque en 1er avec strength * lvl => 30
+- Humans vs Werewolf
 
-Thad recoit 30 de degat -50% => 15, Thad health passe a 15
+  - Humans stat: { name: "Cloud" , health: 100, strength: 30, lvl: 1, xp: 0, race: "humans" };
 
-Tour 2 : Thad attaque Cloud avec strength * lvl => 10
+  - Wereworf stat: { name: "Thad" , health: 30, strength: 10, lvl: 1, xp: 0 };
 
-Cloud recoit 10 de degat, sa health passe a 90
+- Tour 1 : Cloud attaque en 1er avec strength * lvl => 30
 
-Tour 3 : Cloud attaque avec strength * lvl => 30
+  - Thad recoit 30 de degat -50% => 15, Thad health passe a 15
 
-Thad recoit 30 de degat -50% => 15, Thad health passe a 0... bye bye Thad
+- Tour 2 : Thad attaque Cloud avec strength * lvl => 10
 
-Le combat est fini :
+  - Cloud recoit 10 de degat, sa health passe a 90
 
-L'xp de Cloud augmente de 2
+- Tour 3 : Cloud attaque avec strength * lvl => 30
 
-Cloud recupere 10% de health de Thad, 30 / 100 * 10 = 3
+- Thad recoit 30 de degat -50% => 15, Thad health passe a 0... bye bye Thad
 
-Cloud stat: { name: "Cloud" , health: 93, strength: 30, lvl: 1, xp: 2, race: "humans" };
+- Le combat est fini :
 
-​
+  - L'xp de Cloud augmente de 2
 
-​
+  - Cloud recupere 10% de health de Thad, 30 / 100 * 10 = 3
 
-​
+  - Cloud stat: { name: "Cloud" , health: 93, strength: 30, lvl: 1, xp: 2, race: "humans" };
 
-Modalités pédagogiques
+
+
+## Modalités pédagogiques
 Par groupe de 2 ou 3
 
-Critères de performance
-Le diagramme de classe est conforme aux spécifications UML.
-Les consignes du clients sont respectées.
-Chaque classe a son propre fichier.
-Le code est correctement indenté, lisible(es6) et chaque classe est documentée(JSDoc)
-Bonne répartition des taches dans le groupe
-Page html des tableaux de stats en ligne
-Modalités d'évaluation
-Présentation de groupe
-Vérification de la bonne répartition des taches via les commit
-Livrables
-Diagramme de classe en pdf.  
+## Critères de performance
+- Le diagramme de classe est conforme aux spécifications UML.
+- Les consignes du clients sont respectées.
+- Chaque classe a son propre fichier.
+- Le code est correctement indenté, lisible(es6) et chaque classe est documentée(JSDoc)
+- Bonne répartition des taches dans le groupe
+- Page html des tableaux de stats en ligne
 
-Diagramme de cas d'utilisation en pdf.  
+## Modalités d'évaluation
+- Présentation de groupe
+- Vérification de la bonne répartition des taches via les commit
 
-1 dépôt gitlab par groupe.  
+## Livrables
 
-Page HTML des tableaux de stats en ligne.
+- Diagramme de classe en pdf.  
+
+- Diagramme de cas d'utilisation en pdf.  
+
+- 1 dépôt gitlab par groupe.  
+
+- Page HTML des tableaux de stats en ligne.
