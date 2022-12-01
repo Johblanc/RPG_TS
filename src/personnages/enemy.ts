@@ -1,4 +1,4 @@
-import { Personnage } from "./personnage";
+import { Personnage } from "./character";
 
 export class Ennemies extends Personnage {
 

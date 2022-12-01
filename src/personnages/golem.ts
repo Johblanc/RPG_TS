@@ -1,14 +1,14 @@
-import { Ennemies } from "./ennemies";
+import { Ennemies } from "./enemy";
 
 export class Golem extends Ennemies { 
 
     constructor(name: string, health: number, strenght: number, lvl: number, exp: number) {
         super(name, health, strenght, lvl, exp)
     }
-    takeDammage(value : number) : void {
+    takeDamage(value : number) : void {
         let rand = Math.floor(Math.random()*2)
         if (rand === 1) {
-            super.takeDammage(value);
+            super.takeDamage(value);
         }
     };
 }

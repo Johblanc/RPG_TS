@@ -1,5 +1,5 @@
-import { Ennemies } from "./ennemies";
-import { Personnage } from "./personnage";
+import { Ennemies } from "./enemy";
+import { Personnage } from "./character";
 
 export class Griffon extends Ennemies {
     isFlying: boolean;

@@ -1,4 +1,4 @@
-import { Personnage } from "./personnage";
+import { Personnage } from "./character";
 
 class Hero extends Personnage {
     private race: string

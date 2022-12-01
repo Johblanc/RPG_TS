@@ -1,5 +1,5 @@
-import { Ennemies } from "./ennemies";
-import { Personnage } from "./personnage";
+import { Ennemies } from "./enemy";
+import { Personnage } from "./character";
 
 export class dragon extends Ennemies {
     private isFlying: boolean
@@ -20,10 +20,10 @@ export class dragon extends Ennemies {
     takeDammage(value: number): void {
         if (this.isFlying) {
 
-            super.takeDammage(Math.round(value * 0.4));
+            super.takeDamage(Math.round(value * 0.4));
         }
         else {
-            super.takeDammage(Math.round(value * 0.5));
+            super.takeDamage(Math.round(value * 0.5));
         }
     }
 

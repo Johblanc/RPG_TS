@@ -51,7 +51,9 @@ export class Personnage {
         this.exp = newvalue;
     }
 
-    takeDammage(value : number) : void {};
+    takeDamage(damagesTaken : number) : void {
+        this.setHealth (this.getHealth() - damagesTaken )
+    };
 
     attack(opponent : Personnage){};
 
