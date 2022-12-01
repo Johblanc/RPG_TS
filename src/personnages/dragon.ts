@@ -1,5 +1,5 @@
 import { Ennemies } from "./enemy";
-import { Personnage } from "./character";
+import { Character } from "./character";
 
 export class Dragon extends Ennemies {
     public isFlying: boolean
@@ -32,7 +32,7 @@ export class Dragon extends Ennemies {
     }
 
 
-    attackFromSky(opponent: Personnage): void {
+    attackFromSky(opponent: Character): void {
         let initStrenght = this.getStrenght();
         this.setStrenght(initStrenght*1.1)
         super.attack(opponent);
@@ -40,7 +40,7 @@ export class Dragon extends Ennemies {
         this.isFlying = false;
         
     }
-        attack(opponent: Personnage): void {
+        attack(opponent: Character): void {
             if(this.phase == 1) {
             super.attack(opponent); //phase 1
         }

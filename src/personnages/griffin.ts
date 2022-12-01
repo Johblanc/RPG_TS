@@ -1,5 +1,5 @@
 import { Ennemies } from "./enemy";
-import { Personnage } from "./character";
+import { Character } from "./character";
 
 export class Griffin extends Ennemies {
     isFlying: boolean;
@@ -14,7 +14,7 @@ export class Griffin extends Ennemies {
         this.isFlying = true;
     }
 
-    attackFromSky(opponent: Personnage): void {
+    attackFromSky(opponent: Character): void {
         let initStrenght = this.getStrenght();
         this.setStrenght(initStrenght * 1.1);
         super.attack(opponent);
@@ -26,7 +26,7 @@ export class Griffin extends Ennemies {
         super.takeDamage(Math.round(value * (90 / 100)))
     }
 
-    attack(opponent: Personnage): void {
+    attack(opponent: Character): void {
         if (this.phase == 1) {
             super.attack(opponent); //phase 1
         }

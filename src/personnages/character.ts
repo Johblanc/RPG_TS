@@ -1,4 +1,4 @@
-export class Personnage {
+export class Character {
     private name: string;
     private health: number;
     private strenght: number;
@@ -55,14 +55,14 @@ export class Personnage {
         this.setHealth (this.getHealth() - damagesTaken )
     };
 
-    attack(opponent : Personnage){
+    attack(opponent : Character){
         opponent.takeDamage(this.getStrenght())
     };
 
     die() : void{
         console.log(`${this.name} is dead `);
         
-};
+    };
 
 }
 

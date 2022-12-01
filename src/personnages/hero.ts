@@ -1,10 +1,10 @@
-import { Personnage } from "./character";
+import { Character } from "./character";
 import { Dragon } from "./dragon";
 import { Griffin } from "./griffin";
 
 type TEnemyVolant = Dragon | Griffin
 
-class Hero extends Personnage {
+class Hero extends Character {
     private race: string;
 
     constructor(name: string, health: number, strenght: number, lvl: number, exp: number, race: string) {
@@ -16,10 +16,11 @@ class Hero extends Personnage {
     public getRace(): string {
         return this.race
     }
+    
     public setRace(newvalue: string): void {
         this.race = newvalue;
     }
-    attack(opponent: Personnage): void {
+    attack(opponent: Character): void {
         let initStrenght = this.getStrenght()
         if ((opponent instanceof Dragon || opponent instanceof Griffin) && opponent.isFlying) {
             if (this.getRace() == "elf") {

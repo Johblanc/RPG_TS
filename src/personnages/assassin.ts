@@ -1,5 +1,5 @@
 import { Ennemies } from "./enemy"
-import { Personnage } from "./character"
+import { Character } from "./character"
 
 export class Assassin extends Ennemies {
     private initStrength : number;
@@ -10,7 +10,7 @@ export class Assassin extends Ennemies {
         
     }
     
-    attack(opponent : Personnage) : void { 
+    attack(opponent : Character) : void { 
         super.attack(opponent);
         this.setStrenght(Math.round(this.getStrenght() * 1.1));
     }

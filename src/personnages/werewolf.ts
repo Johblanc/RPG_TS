@@ -1,5 +1,5 @@
 import { Ennemies } from "./enemy";
-import { Personnage } from "./character";
+import { Character } from "./character";
 
 export class Werewolf extends Ennemies {
     
