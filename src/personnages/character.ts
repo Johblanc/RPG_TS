@@ -58,16 +58,9 @@ export class Personnage {
     attack(opponent : Personnage){};
 
     die() : void{
-
-        type TT = {
-            test: boolean | undefined
-        }
-        let a: TT = {
-            test: undefined
-        }
-
-        let test = a.test
-    };
+        console.log(`${this.name} is dead `);
+        
+};
 
 }
 

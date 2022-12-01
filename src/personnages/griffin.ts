@@ -23,7 +23,7 @@ export class Griffin extends Ennemies {
     }
 
     takeDamage(value: number): void {
-        super.takeDammage(Math.round(value * (90 / 100)))
+        super.takeDamage(Math.round(value * (90 / 100)))
     }
 
     attack(opponent: Personnage): void {

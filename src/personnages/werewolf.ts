@@ -8,6 +8,6 @@ export class Werewolf extends Ennemies {
         
     }
     takeDamage(value : number) : void{
-        super.takeDammage(value * (50 /100 ))
+        super.takeDamage(value * (50 /100 ))
     }
 }
