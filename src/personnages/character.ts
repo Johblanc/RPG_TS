@@ -57,7 +57,17 @@ export class Personnage {
 
     attack(opponent : Personnage){};
 
-    die() : void{};
+    die() : void{
+
+        type TT = {
+            test: boolean | undefined
+        }
+        let a: TT = {
+            test: undefined
+        }
+
+        let test = a.test
+    };
 
 }
 
