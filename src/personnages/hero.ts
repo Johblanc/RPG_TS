@@ -1,7 +1,11 @@
 import { Personnage } from "./character";
+import { Dragon } from "./dragon";
+import { Griffin } from "./griffin";
+
+type TEnemyVolant = Dragon | Griffin
 
 class Hero extends Personnage {
-    private race: string
+    private race: string;
 
     constructor(name: string, health: number, strenght: number, lvl: number, exp: number, race: string) {
         super(name, health, strenght, lvl, exp)
@@ -15,6 +19,26 @@ class Hero extends Personnage {
     public setRace(newvalue: string): void {
         this.race = newvalue;
     }
+    attack(opponent: Personnage): void {
+        let initStrenght = this.getStrenght()
+        if ((opponent instanceof Dragon || opponent instanceof Griffin) && opponent.isFlying) {
+            if (this.getRace() == "elf") {
+                this.setStrenght(Math.round(this.getStrenght() * 1.1));
+            } else if (this.getRace() == "human") {
+                this.setStrenght(Math.round(this.getStrenght() * 0.9));
+            }
+        }
+        else {
+            if (this.getRace() == "elf") {
+                this.setStrenght(Math.round(this.getStrenght() * 0.9));
+            } else if (this.getRace() == "human") {
+                this.setStrenght(Math.round(this.getStrenght() * 1.1));
+            }
+            
+        }
+        super.attack(opponent);
+        this.setStrenght(initStrenght)
+    }
 
     takeDamage(damagesTaken: number): void {
         if (this.getRace() == "dwarf") {
@@ -22,6 +46,7 @@ class Hero extends Personnage {
             if (rand === 2) {
                 super.takeDamage(damagesTaken / 2);
             }
+
         }
     }
 }

@@ -2,7 +2,7 @@ import { Ennemies } from "./enemy";
 import { Personnage } from "./character";
 
 export class Dragon extends Ennemies {
-    private isFlying: boolean
+    public isFlying: boolean
     private phase: number = 1;
 
     constructor(name: string, health: number, strenght: number, lvl: number, exp: number, isFlying: boolean) {
