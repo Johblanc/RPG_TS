@@ -23,19 +23,19 @@ export class Battle {
         return this.characterB;
     }
 
-
+    
     public setCharacterB(newvalue: Character) {
         this.characterB = newvalue;
     }
-
+    
     public getRecap(): string[] {
         return this.recap;
     }
-
+    
     public setRecap(newvalue: string[]) {
         this.recap = newvalue;
     }
-
+    
     fight() {
         let resume = `Tour ${this.recap.length} /n`
         if (this.recap.length % 2 == 0) {
@@ -61,7 +61,6 @@ export class Battle {
             resume += `${this.characterA.getName()} est victorieux`
         }
         this.recap.push(resume);
-
-
+    
     }
 }
