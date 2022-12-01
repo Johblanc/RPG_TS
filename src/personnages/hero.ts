@@ -42,12 +42,16 @@ export class Hero extends Character {
     }
 
     takeDamage(damagesTaken: number): void {
+        
         if (this.getRace() == "dwarf") {
             let rand = Math.floor(Math.random() * 5)
             if (rand === 2) {
                 super.takeDamage(damagesTaken / 2);
+            } else {
+                super.takeDamage(damagesTaken)
             }
-
+        } else {
+        super.takeDamage(damagesTaken)
         }
     }
 }

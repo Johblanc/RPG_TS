@@ -54,10 +54,10 @@ export class Character {
         return this.exp
     }
     public setExp(newvalue: number): void {
-        this.setExp(newvalue);
+        this.exp = newvalue;
         if (this.getExp() >= EXP_BY_LVL){
             this.setLvl(this.getLvl()+1);
-            this.setExp(newvalue % EXP_BY_LVL);
+            this.exp = newvalue % EXP_BY_LVL;
         }
         
     }
@@ -67,7 +67,8 @@ export class Character {
     }
 
     public takeDamage(damagesTaken : number) : void {
-        this.setHealth (this.getHealth() - damagesTaken )
+        
+        this.setHealth (Math.round(this.getHealth() - damagesTaken ))
     };
 
     public attack(opponent : Character){
