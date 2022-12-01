@@ -4,7 +4,7 @@ import { Griffin } from "./griffin";
 
 type TEnemyVolant = Dragon | Griffin
 
-class Hero extends Character {
+export class Hero extends Character {
     private race: string;
 
     constructor(name: string, health: number, strenght: number, lvl: number, exp: number, race: string) {
