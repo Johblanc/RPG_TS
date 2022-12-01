@@ -18,6 +18,11 @@ export class Assassin extends Ennemies {
     resetStrenght() : void{
         this.setStrenght(this.initStrength);
     }
+    public fightEnd(opponent: Character){
+        super.fightEnd(opponent);
+        this.resetStrenght();
+    }
+
 
 
 }

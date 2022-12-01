@@ -1,4 +1,4 @@
-import { DMG_BY_LVL, EXP_BY_LVL } from "../const/config";
+import {  EXP_BY_LVL } from "../const/config";
 
 export class Character {
     private name: string;
@@ -20,6 +20,7 @@ export class Character {
 
     }
 
+
     /** permet de récuperer le nom */
     public getName(): string {
         return this.name
@@ -36,7 +37,7 @@ export class Character {
     }
     /** permet de récupérer la force */
     public getStrenght(): number {
-        return this.strenght + DMG_BY_LVL *( this.getLvl()-1);
+        return this.strenght * this.getLvl();
     }
     public setStrenght(newvalue: number): void {
         this.strenght = newvalue;
@@ -61,18 +62,28 @@ export class Character {
         
     }
 
-    takeDamage(damagesTaken : number) : void {
+    getMaxHealth(){
+        return this.maxHealth
+    }
+
+    public takeDamage(damagesTaken : number) : void {
         this.setHealth (this.getHealth() - damagesTaken )
     };
 
-    attack(opponent : Character){
+    public attack(opponent : Character){
         opponent.takeDamage(this.getStrenght())
     };
 
-    die() : void{
+    public die() : void{
         console.log(`${this.name} is dead `);
         
     };
+
+    public fightEnd(opponent: Character){
+        this.setHealth(this.getHealth()  + opponent.getHealth() / 10);
+        this.getHealth() > this.getMaxHealth() && this.setHealth(this.getMaxHealth()) ;
+        this.setExp(this.getExp() + 2 )
+    }
 
 }
 
