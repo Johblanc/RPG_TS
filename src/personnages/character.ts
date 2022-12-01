@@ -55,7 +55,9 @@ export class Personnage {
         this.setHealth (this.getHealth() - damagesTaken )
     };
 
-    attack(opponent : Personnage){};
+    attack(opponent : Personnage){
+        opponent.takeDamage(this.getStrenght())
+    };
 
     die() : void{
         console.log(`${this.name} is dead `);
