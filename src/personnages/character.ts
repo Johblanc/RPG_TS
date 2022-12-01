@@ -1,14 +1,19 @@
+import { DMG_BY_LVL, EXP_BY_LVL } from "../const/config";
+
 export class Character {
     private name: string;
     private health: number;
+    private maxHealth : number;
     private strenght: number;
     private lvl: number;
     private exp: number;
+    
     //race : string;
 
     constructor(name: string, health: number, strenght: number, lvl: number, exp: number) {
         this.name = name;
         this.health = health;
+        this.maxHealth = health;
         this.strenght = strenght;
         this.lvl = lvl;
         this.exp = exp;
@@ -31,7 +36,7 @@ export class Character {
     }
     /** permet de récupérer la force */
     public getStrenght(): number {
-        return this.strenght
+        return this.strenght + DMG_BY_LVL *( this.getLvl()-1);
     }
     public setStrenght(newvalue: number): void {
         this.strenght = newvalue;
@@ -48,7 +53,12 @@ export class Character {
         return this.exp
     }
     public setExp(newvalue: number): void {
-        this.exp = newvalue;
+        this.setExp(newvalue);
+        if (this.getExp() >= EXP_BY_LVL){
+            this.setLvl(this.getLvl()+1);
+            this.setExp(newvalue % EXP_BY_LVL);
+        }
+        
     }
 
     takeDamage(damagesTaken : number) : void {
