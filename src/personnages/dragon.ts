@@ -1,7 +1,7 @@
 import { Ennemies } from "./enemy";
 import { Personnage } from "./character";
 
-export class dragon extends Ennemies {
+export class Dragon extends Ennemies {
     private isFlying: boolean
     private phase: number = 1;
 

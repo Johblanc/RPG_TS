@@ -16,4 +16,12 @@ class Hero extends Personnage {
         this.race = newvalue;
     }
 
+    takeDamage(damagesTaken: number): void {
+        if (this.getRace() == "dwarf") {
+            let rand = Math.floor(Math.random() * 5)
+            if (rand === 2) {
+                super.takeDamage(damagesTaken / 2);
+            }
+        }
+    }
 }
