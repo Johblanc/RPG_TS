@@ -9,6 +9,7 @@ export class Battle {
   constructor(characterA: Character, characterB: Character) {
     this.characterA = characterA;
     this.characterB = characterB;
+    this.fight();
   }
 
   public getCharacterA(): Character {
@@ -27,14 +28,14 @@ export class Battle {
   }
 
   public getRecap(): string[] {
+    console.log("test");
+    
     return this.recap;
   }
 
-  public setRecap(newvalue: string[]) {
-    this.recap = newvalue;
-  }
 
   fight() {
+    console.log(this.recap);
 
     let resume = `Tour ${this.recap.length + 1}
 
@@ -53,6 +54,7 @@ Il lui reste ${this.characterA.getHealth()} PV
     if (
         this.characterA.getHealth() > 0 && this.characterB.getHealth() > 0) {
         this.recap.push(resume);
+        
         this.fight();
     } else if (this.characterA.getHealth() <= 0) 
     {
