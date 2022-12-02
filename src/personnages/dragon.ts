@@ -41,8 +41,8 @@ export class Dragon extends Ennemies {
         
     }
         attack(opponent: Character): void {
-            if(this.phase == 1) {
-            super.attack(opponent); //phase 1
+        if(this.phase == 1) {
+        super.attack(opponent); //phase 1
         }
         else if (this.phase == 2) {
             this.fly(); // phase 2
