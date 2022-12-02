@@ -81,7 +81,8 @@ export class Character {
     };
 
     public fightEnd(opponent: Character){
-        this.setHealth(this.getHealth()  + opponent.getHealth() / 10);
+        
+        this.setHealth(this.getHealth()  + Math.round( opponent.getMaxHealth() / 10));
         this.getHealth() > this.getMaxHealth() && this.setHealth(this.getMaxHealth()) ;
         this.setExp(this.getExp() + 2 )
     }
