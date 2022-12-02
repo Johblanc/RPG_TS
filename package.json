@@ -1,17 +1,23 @@
 {
-  "name": "project-starter",
+  "name": "template-phaser3-esbuild-jsdoc",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "watch": "tsc -w",
-    "dev": "nodemon ./dist/index.js",
-    "build": "tsc"
+    "tsc-watch": "tsc -w --noEmit",
+    "dev": "node ./esbuild/dev.cjs",
+    "build": "node ./esbuild/build.cjs",
+    "old-start": "esbuild ./src/index.ts --bundle --outfile=./dist/index.js --servedir=dist --sourcemap --target=es2020"
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
+  "type": "module",
   "dependencies": {
-    "nodemon": "^2.0.20"
+    "esbuild": "^0.14.14",
+    "phaser": "^3.55.2",
+    "phaser3-rex-plugins": "^1.1.68"
+  },
+  "devDependencies": {
+    "esbuild-dev-server": "^0.3.0"
   }
 }
