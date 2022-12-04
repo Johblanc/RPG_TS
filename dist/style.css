@@ -1,0 +1,27 @@
+
+body,
+main{
+    width: 100%;
+}
+
+#board {
+    position:relative;
+    width: 100%;
+    height: 25%;
+    height: auto;
+}
+
+
+#board-bg {
+    position: absolute;
+    top:0;
+    right: 0;
+    width:100%;
+}
+
+#carac1{
+    width: 30%;
+    position: absolute;
+    bottom: 10%;
+    top: 30%;
+}
