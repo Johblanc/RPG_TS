@@ -5,6 +5,7 @@ import { Golem } from "./personnages/golem";
 import { Hero } from "./personnages/hero";
 import { Werewolf } from "./personnages/werewolf";
 import { Battle } from "./battles/battle";
+import { addRow } from "./affichage/addtable";
 
 
 let ragnarlawcode = new Hero('RagnarLawCode',100, 14, 1, 0, 'human');
@@ -30,6 +31,8 @@ console.log(ragnarlawcode.getExp());
 let bat2 = new Battle(ragnarlawcode,griffin)
 bat2.getRecap().map(item => console.log(item));
 console.log(ragnarlawcode.getExp());
+
+addRow()
 
 
 
